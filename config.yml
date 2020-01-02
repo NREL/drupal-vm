@@ -1060,6 +1060,7 @@ installed_extras:
   - mailhog
   - memcached
   # - newrelic
+  - net-tools
   # - nodejs
   - pimpmylog
   # - redis
@@ -1265,6 +1266,3 @@ ssh_home: "{{ drupal_core_path }}"
 # Add extensions to this list to have them installed with this role.
 php_pecl_extensions: [jsmin]
 # - xdebug
-
-
-
