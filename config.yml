@@ -930,6 +930,16 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
+  - server_name: "sws2.test www.sws2.test"
+    root: "{{ sites_path }}/sws2/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
   - server_name: "sws-project.test www.sws-project.test"
     root: "{{ sites_path }}/sws-project/web"
     is_php: true
