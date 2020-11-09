@@ -780,7 +780,7 @@ nginx_hosts:
           rewrite /femp/requirements/(.*)$ /femp/requirements/index.php?/$1 last;
       }
       location /seeaction {
-          alias /var/www/sites/eere-project/seeaction;
+          alias /var/www/sites/eere-project/seeaction/web;
   
           # Don't touch PHP for static content.
           try_files $uri $uri/ @seeaction;
