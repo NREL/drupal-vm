@@ -8,7 +8,7 @@ vagrant_gui: false
 
 # If you need to run multiple instances of Drupal VM, set a unique hostname,
 # machine name, and IP address for each instance.
-vagrant_hostname: drupalvm.test
+vagrant_hostname: data.test
 vagrant_machine_name: drupalvm
 vagrant_ip: 192.168.88.88
 
@@ -234,6 +234,16 @@ nginx_hosts:
 
   - server_name: "pvdpc.test www.pvdpc.test"
     root: "{{ sites_path }}/pvdpc"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "pvdpc-firstdata.test www.pvdpc-firstdata.test"
+    root: "{{ sites_path }}/pvdpc-firstdata/web"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
