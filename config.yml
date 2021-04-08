@@ -1,6 +1,9 @@
 ---
-# `vagrant_box` can also be set to geerlingguy/centos6, geerlingguy/centos7,
-# geerlingguy/debian8, geerlingguy/ubuntu1404, geerlingguy/ubuntu1204, etc.
+# Available `vagrant_box` values include:
+#   - geerlingguy/drupal-vm (pre-provisioned, based on Ubuntu 18.04)
+#   - geerlingguy/centos8
+#   - geerlingguy/debian10
+#   - geerlingguy/ubuntu1804
 vagrant_box: geerlingguy/drupal-vm
 vagrant_user: vagrant
 vagrant_synced_folder_default_type: nfs
@@ -522,6 +525,16 @@ nginx_hosts:
   # AWS
   - server_name: "cleanenergysolutions.test www.cleanenergysolutions.test"
     root: "{{ sites_path }}/cleanenergysolutions/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "d9.test www.d9.test"
+    root: "{{ sites_path }}/d9/docroot"
     is_php: true
     extra_parameters: |
       listen 443 ssl;

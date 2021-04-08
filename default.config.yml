@@ -2,11 +2,8 @@
 # Available `vagrant_box` values include:
 #   - geerlingguy/drupal-vm (pre-provisioned, based on Ubuntu 18.04)
 #   - geerlingguy/centos8
-#   - geerlingguy/centos7
 #   - geerlingguy/debian10
-#   - geerlingguy/debian9
 #   - geerlingguy/ubuntu1804
-#   - geerlingguy/ubuntu1604
 vagrant_box: geerlingguy/drupal-vm
 
 vagrant_user: vagrant
@@ -45,9 +42,11 @@ vagrant_plugins:
   - name: vagrant-vbguest
   - name: vagrant-hostsupdater
 
+ansible_python_interpreter: python3
+
 # Minimum required versions.
-drupalvm_vagrant_version_min: '1.8.6'
-drupalvm_ansible_version_min: '2.5'
+drupalvm_vagrant_version_min: '2.2.0'
+drupalvm_ansible_version_min: '2.8'
 
 # Force use of ansible_local provisioner, even if Ansible is installed on host.
 force_ansible_local: false
@@ -70,12 +69,13 @@ drupal_build_composer: false
 drupal_composer_path: "{{ config_dir }}/drupal.composer.json"
 drupal_composer_install_dir: "/var/www/drupalvm/drupal"
 drupal_composer_dependencies:
-  - "drupal/devel:^1.2"
+  - "drush/drush:^10"
+  - "drupal/devel:^4.0"
 
 # Set this to 'true' and 'drupal_build_makefile', 'drupal_build_composer' to 'false'
 # if you are using Composer's create-project as a site deployment strategy.
 drupal_build_composer_project: true
-drupal_composer_project_package: "drupal-composer/drupal-project:8.x-dev"
+drupal_composer_project_package: "drupal/recommended-project:^9@dev"
 drupal_composer_project_options: "--prefer-dist --stability dev --no-interaction"
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
@@ -91,11 +91,11 @@ drupal_db_name: drupal
 drupal_db_host: localhost
 
 # Settings for installing a Drupal site if 'drupal_install_site:' is 'true'.
-drupal_major_version: 8
+drupal_major_version: 9
 drupal_domain: "{{ vagrant_hostname }}"
 drupal_site_name: "Drupal"
 drupal_install_profile: standard
-drupal_enable_modules: [ 'devel' ]
+drupal_enable_modules: ['devel']
 drupal_account_name: admin
 drupal_account_pass: admin
 
@@ -198,14 +198,13 @@ mysql_users:
     priv: "{{ drupal_db_name }}.*:ALL"
 
 # PostgreSQL databases and users.
-postgresql_databases:
-  - name: "{{ drupal_db_name }}"
-
 postgresql_users:
   - name: "{{ drupal_db_user }}"
     password: "{{ drupal_db_password }}"
-    db: "{{ drupal_db_name }}"
-    priv: "ALL"
+
+postgresql_databases:
+  - name: "{{ drupal_db_name }}"
+    owner: "{{ drupal_db_user }}"
 
 # Comment out any extra utilities you don't want to install. If you don't want
 # to install *any* extras, set this value to an empty set, e.g. `[]`.
@@ -257,14 +256,14 @@ firewall_disable_ufw: true
 
 # PHP Configuration. Currently-supported versions: 7.2, 7.3, 7.4.
 # See version-specific notes: http://docs.drupalvm.com/en/latest/configurations/php/
-php_version: "7.2"
+php_version: "7.4"
 php_install_recommends: no
 php_memory_limit: "192M"
 php_display_errors: "On"
 php_display_startup_errors: "On"
 php_realpath_cache_size: "1024K"
 php_sendmail_path: "/opt/mailhog/mhsendmail"
-php_opcache_enabled_in_ini: true
+php_opcache_enable: "1"
 php_opcache_memory_consumption: "192"
 php_opcache_max_accelerated_files: 4096
 php_max_input_vars: "4000"
@@ -279,15 +278,14 @@ composer_path: /usr/bin/composer
 composer_home_path: "/home/{{ drupalvm_user }}/.composer"
 composer_home_owner: "{{ drupalvm_user }}"
 composer_home_group: "{{ drupalvm_user }}"
-composer_global_packages:
-  - { name: hirak/prestissimo, release: '^0.3' }
+composer_global_packages: []
 
 # Run specified scripts before or after VM is provisioned. Use {{ playbook_dir }}
 # to reference the provisioning/ folder in Drupal VM or {{ config_dir }} to
 # reference the directory where your `config.yml` is.
 pre_provision_scripts: []
 post_provision_scripts: []
-  # - "{{ playbook_dir }}/../examples/scripts/configure-solr.sh"
+# - "{{ playbook_dir }}/../examples/scripts/configure-solr.sh"
 
 # MySQL Configuration.
 mysql_root_password: root
@@ -319,6 +317,7 @@ pimpmylog_install_dir: /usr/share/php/pimpmylog
 pimpmylog_grant_all_privs: true
 
 # XDebug configuration. XDebug is disabled by default for better performance.
+php_xdebug_version: 2.9.5
 php_xdebug_default_enable: 0
 php_xdebug_coverage_enable: 0
 php_xdebug_cli_disable: yes
@@ -328,8 +327,12 @@ php_xdebug_idekey: PHPSTORM
 php_xdebug_max_nesting_level: 256
 php_xdebug_remote_host: "{{ ansible_default_ipv4.gateway }}"
 
-# Solr Configuration (if enabled above).
-solr_version: "5.5.5"
+# Java configuration.
+java_packages:
+  - "{{ 'openjdk-8-jdk' if ansible_os_family == 'Debian' else 'java-1.8.0-openjdk' }}"
+
+# Solr configuration.
+solr_version: "7.7.2"
 solr_xms: "64M"
 solr_xmx: "128M"
 

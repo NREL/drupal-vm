@@ -3,8 +3,11 @@
 # for RHEL/CentOS.
 php_enablerepo: ""
 
-# Default PHP version to install on Debian-based OSes.
-php_default_version_debian: "7.0"
+# Extra packages to install (in addition to distro-specific default lists).
+php_packages_extra: []
+
+# Default PHP version to install on Debian-based OSes (OS-specific).
+# php_default_version_debian: ""
 
 # PHP package state; use 'present' to make sure it's installed, or 'latest' if
 # you want to upgrade or switch versions using a new repo.
@@ -18,6 +21,9 @@ php_enable_webserver: true
 
 # PHP-FPM configuration.
 php_enable_php_fpm: false
+php_fpm_state: started
+php_fpm_handler_state: restarted
+php_fpm_enabled_on_boot: true
 php_fpm_listen: "127.0.0.1:9000"
 php_fpm_listen_allowed_clients: "127.0.0.1"
 php_fpm_pm_max_children: 50
@@ -70,6 +76,8 @@ php_sendmail_path: "/usr/sbin/sendmail -t -i"
 php_output_buffering: "4096"
 php_short_open_tag: "Off"
 php_disable_functions: []
+php_precision: 14
+php_serialize_precision: "-1"
 
 php_session_cookie_lifetime: 0
 php_session_gc_probability: 1
@@ -90,6 +98,7 @@ php_source_clone_dir: "~/php-src"
 php_source_clone_depth: 1
 php_source_install_path: "/opt/php"
 php_source_install_gmp_path: "/usr/include/x86_64-linux-gnu/gmp.h"
+php_source_mysql_config: "/usr/bin/mysql_config"
 # For faster compile time: "make --jobs=X" where X is # of cores present.
 php_source_make_command: "make"
 php_source_configure_command: >
@@ -128,4 +137,4 @@ php_source_configure_command: >
   --with-zlib=/usr
   --with-bz2=/usr
   --with-recode=/usr
-  --with-mysqli=/usr/bin/mysql_config
+  --with-mysqli={{ php_source_mysql_config }}
