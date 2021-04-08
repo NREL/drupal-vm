@@ -129,416 +129,7 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-    # recsel -e "Version = 'd7' || Version = 'd8' && Ato = 1" -P Name ~/Documents/nrelsites.rec
-  - server_name: "bifipv.test www.bifipv.test"
-    root: "{{ sites_path }}/bifipv/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "buildingdata.test www.buildingdata.test"
-    root: "{{ sites_path }}/buildingdata/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "buildingsfieldtest.test www.buildingsfieldtest.test"
-    root: "{{ sites_path }}/buildingsfieldtest/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "cbrd.test www.cbrd.test"
-    root: "{{ sites_path }}/cbrd/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "communications_resources.test www.communications_resources.test"
-    root: "{{ sites_path }}/communications_resources/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "ec-leds.test www.ec-leds.test"
-    root: "{{ sites_path }}/ec-leds/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "enter.test www.enter.test"
-    root: "{{ sites_path }}/enter/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "nice-future.test www.nice-future.test"
-    root: "{{ sites_path }}/nice-future/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-      fastcgi_buffers 16 16k;
-      fastcgi_buffer_size 32k;
-
-  - server_name: "nsrdb.test www.nsrdb.test"
-    root: "{{ sites_path }}/nsrdb/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "nwtc.test www.nwtc.test"
-    root: "{{ sites_path }}/nwtc/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "pvdpc.test www.pvdpc.test"
-    root: "{{ sites_path }}/pvdpc"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "pvdpc-firstdata.test www.pvdpc-firstdata.test"
-    root: "{{ sites_path }}/pvdpc-firstdata/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "efficiency-charts.test www.efficiency-charts.test"
-    root: "{{ sites_path }}/efficiency-charts"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "sam.test www.sam.test"
-    root: "{{ sites_path }}/sam/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "wild.test www.wild.test"
-    root: "{{ sites_path }}/wild/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "d8-demo07.test www.d8-demo07.test"
-    root: "{{ sites_path }}/d8-demo07/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "decoupled.test www.decoupled.test"
-    root: "{{ sites_path }}/decoupled/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "lightning-project.test www.lightning-project.test"
-    root: "{{ sites_path }}/lightning-project/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "digitalassetmanagement.test www.digitalassetmanagement.test"
-    root: "{{ sites_path }}/digitalassetmanagement/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "eom.test www.eom.test"
-    root: "{{ sites_path }}/eom/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "df-project.test www.df-project.test"
-    root: "{{ sites_path }}/df-project/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "communications-project.test www.communications-project.test"
-    root: "{{ sites_path }}/communications-project/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "data.test www.data.test"
-    root: "{{ sites_path }}/data/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "data-legacy.test www.data-legacy.test"
-    root: "{{ sites_path }}/data-legacy/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "data-catalog.test www.data-catalog.test"
-    root: "{{ sites_path }}/data-catalog/docroot"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-
-  - server_name: "inside-co.test www.inside-co.test"
-    root: "{{ sites_path }}/inside-co/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "library.test www.library.test"
-    root: "{{ sites_path }}/library/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "nrelnow.test www.nrelnow.test"
-    root: "{{ sites_path }}/nrelnow/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "decision-tree-d7.test www.decision-tree-d7.test"
-    root: "{{ sites_path }}/decision-tree-d7/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "decision-tree-d8.test www.decision-tree-d8.test"
-    root: "{{ sites_path }}/decision-tree-d8/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "ppf.test www.ppf.test"
-    root: "{{ sites_path }}/ppf/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "pvgrowth.test www.pvgrowth.test"
-    root: "{{ sites_path }}/pvgrowth/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "pvrw.test www.pvrw.test"
-    root: "{{ sites_path }}/pvrw/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "small-business.test www.small-business.test"
-    root: "{{ sites_path }}/small-business/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-      fastcgi_buffers 16 16k;
-      fastcgi_buffer_size 32k;
-
-  - server_name: "solarpaces.test www.solarpaces.test"
-    root: "{{ sites_path }}/solarpaces/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-      fastcgi_buffers 16 16k;
-      fastcgi_buffer_size 32k;
-
-  - server_name: "comment.test www.comment.test"
-    root: "{{ sites_path }}/comment"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "packagist.test www.packagist.test"
-    root: "{{ sites_path }}/packagist/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "bedrock.test www.bedrock.test"
-    root: "{{ sites_path }}/bedrock/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-
-  - server_name: "zeroenergy.test www.zeroenergy.test"
-    root: "{{ sites_path }}/zeroenergy/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  - server_name: "zeroenergy-pantheon.test www.zeroenergy-pantheon.test"
-    root: "{{ sites_path }}/zeroenergy-pantheon/web"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
-  # Action.network
+  # Accenture FEMP, SeeAction, Wind Resource Center
   - server_name: "eere-project.test www.eere-project.test"
     root: "{{ sites_path }}/eere-project"
     is_php: true
@@ -605,11 +196,11 @@ nginx_hosts:
       location @assistance {
           rewrite /femp/assistance/(.*)$ /femp/assistance/index.php?/$1 last;
       }
-      location /femp/training {
+      location /femp/d7training {
         alias /var/www/sites/eere-project/femp/training_project/web;
 
         # Don't touch PHP for static content.
-        try_files $uri $uri/ @training;
+        try_files $uri $uri/ @d7training;
 
         # Don't allow direct access to PHP files in the vendor directory.
         location ~ /.+\/vendor/.*\.php$ {
@@ -640,10 +231,10 @@ nginx_hosts:
             fastcgi_pass 127.0.0.1:9000;
         }
 
-        location ~ ^/femp/training/sites/.*/files/styles/ {
+        location ~ ^/femp/d7training/sites/.*/files/styles/ {
             try_files $uri @rewrite;
         }
-        location ~ ^/femp/training/(/[a-z\-]+)?/system/files/ {
+        location ~ ^/femp/d7training/(/[a-z\-]+)?/system/files/ {
             try_files $uri /index.php?$query_string;
         }
 
@@ -664,69 +255,8 @@ nginx_hosts:
         }
       }
 
-      location @training {
-          rewrite /femp/training/(.*)$ /femp/training/index.php?/$1 last;
-      }
-      location /wind/resource_center {
-        alias /var/www/sites/eere-project/wind/resource_center/web;
-
-        # Don't touch PHP for static content.
-        try_files $uri $uri/ @resource_center;
-
-        # Don't allow direct access to PHP files in the vendor directory.
-        location ~ /.+\/vendor/.*\.php$ {
-            deny all;
-            return 404;
-        }
-        # Allow "Well-Known URIs" as per RFC 5785
-        location ~* ^/.well-known/ {
-            allow all;
-        }
-        location ~ (^|/)\. {
-            return 403;
-        }
-
-        # Redirect common PHP files to their new locations.
-        location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
-            return 301 $scheme://$host$1/core/$2$is_args$args;
-        }
-
-        # Use fastcgi for all php files.
-        location ~ \.php$|^/update.php {
-            fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
-            fastcgi_index index.php;
-            fastcgi_param SCRIPT_FILENAME $request_filename;
-            fastcgi_intercept_errors on;
-            fastcgi_read_timeout 600;
-            include fastcgi_params;
-            fastcgi_pass 127.0.0.1:9000;
-        }
-
-        location ~ ^/femp/resource_center/sites/.*/files/styles/ {
-            try_files $uri @rewrite;
-        }
-        location ~ ^/femp/resource_center/(/[a-z\-]+)?/system/files/ {
-            try_files $uri /index.php?$query_string;
-        }
-
-        location ~ ^/femp/[a-z\-]+/favicon.ico {
-            log_not_found off;
-            access_log off;
-        }
-
-        location ~ ^/femp/[a-z\-]+/robots.txt {
-            allow all;
-            log_not_found off;
-            access_log off;
-        }
-
-        location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-            expires max;
-            log_not_found off;
-        }
-      }
-      location @resource_center {
-        rewrite /wind/resource_center/(.*)$ /wind/resource_center/index.php?/$1 last;
+      location @d7training {
+          rewrite /femp/d7training/(.*)$ /femp/d7training/index.php?/$1 last;
       }
       location /femp/requirements {
         alias /var/www/sites/eere-project/femp/requirements_project/web;
@@ -789,12 +319,73 @@ nginx_hosts:
       location @requirements {
           rewrite /femp/requirements/(.*)$ /femp/requirements/index.php?/$1 last;
       }
+      location /femp/training {
+        alias /var/www/sites/eere-project/femp/training/web;
+
+        # Don't touch PHP for static content.
+        try_files $uri $uri/ @training;
+
+        # Don't allow direct access to PHP files in the vendor directory.
+        location ~ /.+\/vendor/.*\.php$ {
+            deny all;
+            return 404;
+        }
+        # Allow "Well-Known URIs" as per RFC 5785
+        location ~* ^/.well-known/ {
+            allow all;
+        }
+        location ~ (^|/)\. {
+            return 403;
+        }
+
+        # Redirect common PHP files to their new locations.
+        location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
+            return 301 $scheme://$host$1/core/$2$is_args$args;
+        }
+
+        # Use fastcgi for all php files.
+        location ~ \.php$|^/update.php {
+            fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $request_filename;
+            fastcgi_intercept_errors on;
+            fastcgi_read_timeout 600;
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+        }
+
+        location ~ ^/femp/training/sites/.*/files/styles/ {
+            try_files $uri @rewrite;
+        }
+        location ~ ^/femp/training/(/[a-z\-]+)?/system/files/ {
+            try_files $uri /index.php?$query_string;
+        }
+
+        location ~ ^/femp/[a-z\-]+/favicon.ico {
+            log_not_found off;
+            access_log off;
+        }
+
+        location ~ ^/femp/[a-z\-]+/robots.txt {
+            allow all;
+            log_not_found off;
+            access_log off;
+        }
+
+        location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+            expires max;
+            log_not_found off;
+        }
+      }
+      location @training {
+          rewrite /femp/training/(.*)$ /femp/training/index.php?/$1 last;
+      }
       location /seeaction {
           alias /var/www/sites/eere-project/seeaction/web;
-  
+
           # Don't touch PHP for static content.
           try_files $uri $uri/ @seeaction;
-  
+
           # Don't allow direct access to PHP files in the vendor directory.
           location ~ /.+\/vendor/.*\.php$ {
               deny all;
@@ -807,12 +398,12 @@ nginx_hosts:
           location ~ (^|/)\. {
               return 403;
           }
-  
+
           # Redirect common PHP files to their new locations.
           location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
               return 301 $scheme://$host$1/core/$2$is_args$args;
           }
-  
+
           # Use fastcgi for all php files.
           location ~ \.php$|^/update.php {
               fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
@@ -823,25 +414,25 @@ nginx_hosts:
               include fastcgi_params;
               fastcgi_pass 127.0.0.1:9000;
           }
-  
+
           location ~ ^/seeaction/sites/.*/files/styles/ {
               try_files $uri @rewrite;
           }
           location ~ ^/seeaction/(/[a-z\-]+)?/system/files/ {
               try_files $uri /index.php?$query_string;
           }
-  
+
           location ~ ^/[a-z\-]+/favicon.ico {
               log_not_found off;
               access_log off;
           }
-  
+
           location ~ ^/[a-z\-]+/robots.txt {
               allow all;
               log_not_found off;
               access_log off;
           }
-  
+
           location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
               expires max;
               log_not_found off;
@@ -850,66 +441,66 @@ nginx_hosts:
       location @seeaction {
         rewrite /seeaction/(.*)$ /seeaction/index.php?/$1 last;
       }
-      location /resilience {
-          alias /var/www/sites/eere-project/resilience_project/web;
-  
-          # Don't touch PHP for static content.
-          try_files $uri $uri/ @resilience;
-  
-          # Don't allow direct access to PHP files in the vendor directory.
-          location ~ /.+\/vendor/.*\.php$ {
-              deny all;
-              return 404;
-          }
-          # Allow "Well-Known URIs" as per RFC 5785
-          location ~* ^/.well-known/ {
-              allow all;
-          }
-          location ~ (^|/)\. {
-              return 403;
-          }
-  
-          # Redirect common PHP files to their new locations.
-          location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
-              return 301 $scheme://$host$1/core/$2$is_args$args;
-          }
-  
-          # Use fastcgi for all php files.
-          location ~ \.php$|^/update.php {
-              fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
-              fastcgi_index index.php;
-              fastcgi_param SCRIPT_FILENAME $request_filename;
-              fastcgi_intercept_errors on;
-              fastcgi_read_timeout 600;
-              include fastcgi_params;
-              fastcgi_pass 127.0.0.1:9000;
-          }
-  
-          location ~ ^/resilience/sites/.*/files/styles/ {
-              try_files $uri @rewrite;
-          }
-          location ~ ^/resilience/(/[a-z\-]+)?/system/files/ {
-              try_files $uri /index.php?$query_string;
-          }
-  
-          location ~ ^/[a-z\-]+/favicon.ico {
-              log_not_found off;
-              access_log off;
-          }
-  
-          location ~ ^/[a-z\-]+/robots.txt {
-              allow all;
-              log_not_found off;
-              access_log off;
-          }
-  
-          location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
-              expires max;
-              log_not_found off;
-          }
+      location /wind/resource_center {
+        alias /var/www/sites/eere-project/wind/resource_center/web;
+
+        # Don't touch PHP for static content.
+        try_files $uri $uri/ @resource_center;
+
+        # Don't allow direct access to PHP files in the vendor directory.
+        location ~ /.+\/vendor/.*\.php$ {
+            deny all;
+            return 404;
+        }
+        # Allow "Well-Known URIs" as per RFC 5785
+        location ~* ^/.well-known/ {
+            allow all;
+        }
+        location ~ (^|/)\. {
+            return 403;
+        }
+
+        # Redirect common PHP files to their new locations.
+        location ~ ^((?!.*(?:core)).*)/(install.php|rebuild.php) {
+            return 301 $scheme://$host$1/core/$2$is_args$args;
+        }
+
+        # Use fastcgi for all php files.
+        location ~ \.php$|^/update.php {
+            fastcgi_split_path_info ^(.+?\.php)(|/.*)$;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $request_filename;
+            fastcgi_intercept_errors on;
+            fastcgi_read_timeout 600;
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+        }
+
+        location ~ ^/wind/resource_center/sites/.*/files/styles/ {
+            try_files $uri @rewrite;
+        }
+        location ~ ^/wind/resource_center/(/[a-z\-]+)?/system/files/ {
+            try_files $uri /index.php?$query_string;
+        }
+
+        location ~ ^/femp/[a-z\-]+/favicon.ico {
+            log_not_found off;
+            access_log off;
+        }
+
+        location ~ ^/femp/[a-z\-]+/robots.txt {
+            allow all;
+            log_not_found off;
+            access_log off;
+        }
+
+        location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
+            expires max;
+            log_not_found off;
+        }
       }
-      location @resilience {
-          rewrite /resilience/(.*)$ /resilience/index.php?/$1 last;
+      location @resource_center {
+        rewrite /wind/resource_center/(.*)$ /wind/resource_center/index.php?/$1 last;
       }
       listen 443 ssl;
       ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
@@ -917,8 +508,7 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  # Action.net EERE ECHWE
-  # Action.network
+  # Accenture Energy Icorps
   - server_name: "energyicorps.test www.energyicorps.test"
     root: "{{ sites_path }}/energyicorps/web"
     is_php: true
@@ -930,6 +520,142 @@ nginx_hosts:
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
   # AWS
+  - server_name: "cleanenergysolutions.test www.cleanenergysolutions.test"
+    root: "{{ sites_path }}/cleanenergysolutions/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "data.test www.data.test"
+    root: "{{ sites_path }}/data/docroot"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "data-catalog.test www.data-catalog.test"
+    root: "{{ sites_path }}/data-catalog/docroot"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "data-legacy.test www.data-legacy.test"
+    root: "{{ sites_path }}/data-legacy/docroot"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "decision-tree-d7.test www.decision-tree-d7.test"
+    root: "{{ sites_path }}/decision-tree-d7/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "decision-tree-d8.test www.decision-tree-d8.test"
+    root: "{{ sites_path }}/decision-tree-d8/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "efficiency-charts.test www.efficiency-charts.test"
+    root: "{{ sites_path }}/efficiency-charts"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "nice-future.test www.nice-future.test"
+    root: "{{ sites_path }}/nice-future/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+      fastcgi_buffers 16 16k;
+      fastcgi_buffer_size 32k;
+
+  - server_name: "packagist.test www.packagist.test"
+    root: "{{ sites_path }}/packagist/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "ppf.test www.ppf.test"
+    root: "{{ sites_path }}/ppf/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "pvrw.test www.pvrw.test"
+    root: "{{ sites_path }}/pvrw/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+
+  - server_name: "small-business.test www.small-business.test"
+    root: "{{ sites_path }}/small-business/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+      fastcgi_buffers 16 16k;
+      fastcgi_buffer_size 32k;
+
+  - server_name: "solarpaces.test www.solarpaces.test"
+    root: "{{ sites_path }}/solarpaces/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
+      fastcgi_buffers 16 16k;
+      fastcgi_buffer_size 32k;
+
   - server_name: "sws.test www.sws.test"
     root: "{{ sites_path }}/sws/web"
     is_php: true
@@ -950,8 +676,8 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "sws-project.test www.sws-project.test"
-    root: "{{ sites_path }}/sws-project/web"
+  - server_name: "zeroenergy.test www.zeroenergy.test"
+    root: "{{ sites_path }}/zeroenergy/web"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
@@ -960,8 +686,9 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "beopt.test www.beopt.test"
-    root: "{{ sites_path }}/beopt/web"
+  # NREL Data Center
+  - server_name: "pvdpc.test www.pvdpc.test"
+    root: "{{ sites_path }}/pvdpc"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
@@ -970,8 +697,8 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "cleanenergysolutions.test www.cleanenergysolutions.test"
-    root: "{{ sites_path }}/cleanenergysolutions/web"
+  - server_name: "pvdpc-firstdata.test www.pvdpc-firstdata.test"
+    root: "{{ sites_path }}/pvdpc-firstdata/web"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
@@ -981,6 +708,15 @@ nginx_hosts:
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
   # Pantheon
+  - server_name: "enter.test www.enter.test"
+    root: "{{ sites_path }}/enter/web"
+    is_php: true
+    extra_parameters: |
+      listen 443 ssl;
+      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
+      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+      ssl_protocols       TLSv1.1 TLSv1.2;
+      ssl_ciphers         HIGH:!aNULL:!MD5;
 
   - server_name: "h2awsm.test www.h2awsm.test"
     root: "{{ sites_path }}/h2awsm/web"
@@ -992,8 +728,9 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "h2awsm-project.test www.h2awsm-project.test"
-    root: "{{ sites_path }}/h2awsm-project/web"
+  # Services
+  - server_name: "{{ vagrant_ip }} dashboard.{{ vagrant_hostname }}"
+    root: "{{ dashboard_install_dir }}"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
@@ -1012,16 +749,6 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "xhprof.{{ vagrant_hostname }}"
-    root: "{{ php_xhprof_html_dir }}"
-    is_php: true
-    extra_parameters: |
-      listen 443 ssl;
-      ssl_certificate     /etc/ssl/certs/ssl-cert-snakeoil.pem;
-      ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
-      ssl_protocols       TLSv1.1 TLSv1.2;
-      ssl_ciphers         HIGH:!aNULL:!MD5;
-
   - server_name: "pimpmylog.{{ vagrant_hostname }}"
     root: "{{ pimpmylog_install_dir }}"
     is_php: true
@@ -1032,8 +759,8 @@ nginx_hosts:
       ssl_protocols       TLSv1.1 TLSv1.2;
       ssl_ciphers         HIGH:!aNULL:!MD5;
 
-  - server_name: "{{ vagrant_ip }} dashboard.{{ vagrant_hostname }}"
-    root: "{{ dashboard_install_dir }}"
+  - server_name: "xhprof.{{ vagrant_hostname }}"
+    root: "{{ php_xhprof_html_dir }}"
     is_php: true
     extra_parameters: |
       listen 443 ssl;
