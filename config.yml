@@ -815,7 +815,7 @@ installed_extras:
   # - blackfire
   # - drupalconsole
   - drush
-  - elasticsearch
+  # - elasticsearch
   # - java
   - mailhog
   - memcached
